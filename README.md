@@ -15,13 +15,14 @@ Please download the pre-trained models from the following links. We assume that 
 
 | Link 
 | :--- 
-|[FFHQ CycleEncoding Inversion](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view?usp=sharing)
+|[FFHQ CycleEncoding Inversion](https://drive.google.com/file/d/1_AfQgD0J9cHsHDra18BjlnUgHN6RdbTu/view)
 
 Please also download the auxiliary models from <a href="https://github.com/omertov/encoder4editing">e4e</a>.
 
 ## Inversion
 
-### Cycle Encoding + Pivotal Tuning
+### Method 1: Cycle Encoding + Pivotal Tuning
+As described in the paper, this method is faster than the second method. Please perform the following steps:
 
 ```
 cd pivotal_tuning
@@ -31,7 +32,8 @@ Edit "configs/hyperparameters.py" and set "use_saved_w_pivots = False" and "firs
 sh run_pivotal_tuning.sh
 ```
 
-### Cycle Encoding + Refinement + Pivotal Tuning
+### Method 2: Cycle Encoding + Refinement + Pivotal Tuning
+This method achieves better reconstruction quality than the first method. Please perform the following steps:
 
 ```
 cd refinement
